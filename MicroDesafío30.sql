@@ -25,7 +25,7 @@ on am.movie_id = m.id
 where m.title like 'La Guerra de las galaxias%';
 
 -- PASO 3
-select title, coalesce (g.name, 'No tiene género')
+select title, coalesce (g.name, 'No tiene género') genero
 from movies m
 left join genres g
 on m.genre_id = g.id;
