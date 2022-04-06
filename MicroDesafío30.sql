@@ -1,5 +1,5 @@
 /*
- * Microdesafío número 30 
+ * MicrodesafÃ­o nÃºmero 30 
  */
 
 -- PASO 1
@@ -25,13 +25,13 @@ on am.movie_id = m.id
 where m.title like 'La Guerra de las galaxias%';
 
 -- PASO 3
-select title, coalesce (g.name, 'No tiene género') genero
+select title, coalesce (g.name, 'No tiene gÃ©nero') genero
 from movies m
 left join genres g
 on m.genre_id = g.id;
 
 -- PASO 4
-select title, datediff(end_date,release_date) as duración
+select title, datediff(end_date,release_date) as duraciÃ³n
 from series s;
 
 -- PASO 5
@@ -58,7 +58,7 @@ FROM movies m
 inner join genres g 
 on m.genre_id = g.id 
 GROUP BY genre_id 
-HAVING COUNT(genre_id)>3;
+HAVING COUNT(genre_id)>=3;
 
 
 
